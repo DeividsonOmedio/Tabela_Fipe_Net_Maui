@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"            
+             x:Class="Maui_Tabela_Fipe.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+
+            <Label
+                Text="Tabela Fipe"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="30"
+                HorizontalOptions="Center"
+                TextColor="Green"
+                FontAttributes="Bold"/>
+
+
+            <Label
+                Text="Tipo de veiculo"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Escolha o tipo de veiculo para consulta"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="Blue"
+                HorizontalOptions="Center" />
+
+            <Picker x:Name="pickerTipo"
+                    Title="Selecione o tipo do veiculo"
+                    HorizontalOptions="Center"
+                    FontSize="20"
+                    TextColor="BlueViolet"
+                    HorizontalTextAlignment="Center"  
+                    WidthRequest="300"
+                    BackgroundColor="AliceBlue"
+                    SelectedIndexChanged="SelTipo"
+                    >
+                
+            </Picker>
+
+            <Label
+                Text="Fabricantes"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Selecione o fabricante"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="Blue"
+                HorizontalOptions="Center" />
+
+            <Picker x:Name="pickerFabricantes"
+                    Title="Selecione o fabricante"
+                    HorizontalOptions="Center"
+                    FontSize="20"
+                    TextColor="BlueViolet"
+                    HorizontalTextAlignment="Center"
+                    WidthRequest="300"
+                    BackgroundColor="AliceBlue"
+                    SelectedIndexChanged="SelFabricante"
+                    >
+
+            </Picker>
+
+            <Label
+                Text="Modelos"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Escolha o modelo"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="Blue"
+                HorizontalOptions="Center" />
+
+            <Picker x:Name="pickerModelo"
+                    Title="Selecione modelo"
+                    HorizontalOptions="Center"
+                    FontSize="20"
+                    TextColor="BlueViolet"
+                    HorizontalTextAlignment="Center"
+                    WidthRequest="300"
+                    BackgroundColor="AliceBlue"
+                    SelectedIndexChanged="SelModelos"
+                    >
+
+            </Picker>
+
+            <Label
+                Text="Tipo de veiculo"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Escolha o tipo de veiculo para consulta"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="Blue"
+                HorizontalOptions="Center" />
+
+            <Picker x:Name="pickerAno"
+                    Title="Selecione o tipo do veiculo"
+                    HorizontalOptions="Center"
+                    FontSize="20"
+                    TextColor="BlueViolet"
+                    HorizontalTextAlignment="Center"
+                    WidthRequest="300"
+                    BackgroundColor="AliceBlue"
+                    SelectedIndexChanged="SelAnoPesquisado"
+                    >
+
+            </Picker>
+
+            <Button
+                x:Name="btnPesquisa"
+                Text="Pesquisar preço R$"
+                SemanticProperties.Hint="Clique para pesquisr o preço"
+                BackgroundColor="Green"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" 
+                Clicked="CarregaDadosPesquisados"
+                IsEnabled="False"/>
+
+            <Label x:Name="lblPreco"
+                Text=""
+                SemanticProperties.HeadingLevel="Level8"
+                SemanticProperties.Description="Tabela Fipe"
+                FontSize="20"
+                TextColor="Blue"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
